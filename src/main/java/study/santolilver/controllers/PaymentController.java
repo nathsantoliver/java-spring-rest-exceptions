@@ -27,7 +27,7 @@ public class PaymentController {
                     .body(paymentDetails);
         } catch (NotEnoughMoneyException e) {
             ErrorDetails errorDetails = new ErrorDetails();
-            errorDetails.setMessage("NNot enough money to make the payment.");
+            errorDetails.setMessage("Not enough money to make the payment.");
             return ResponseEntity
                     .badRequest()
                     .body(errorDetails);
